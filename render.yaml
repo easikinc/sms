@@ -1,7 +1,6 @@
 services:
   - type: web
     name: sms
-    runtime: python-3.10
     buildCommand: "./build.sh"
     startCommand: "gunicorn sms.wsgi:application --bind 0.0.0.0:$PORT"
     envVars:
